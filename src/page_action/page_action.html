@@ -29,6 +29,9 @@
 	  -ms-transition: all 0.30s ease-in-out;
 	  -o-transition: all 0.30s ease-in-out;
 	}
+	input[type="range"]{
+		padding-top: 5px;
+	}
 
 	/*Text Input Boxes*/
 	label {
@@ -127,6 +130,12 @@
       <fieldset>
         <label for="bg-img">Background Image</label>
         <input class="txt-input" id="bg-img-input" type="text" name="bg-img" placeholder="http://www.cat.com/cat.jpg" />
+      </fieldset>
+
+      <fieldset>
+        <label id="range-output" for="range-img">Parallax Ratio</label>
+        <input class="range-input" id="bg-pr-input" type="range" name="bg-pr"
+        		min="0" max="1" step="0.05">
       </fieldset>
   
       <fieldset class="button-wrapper">
