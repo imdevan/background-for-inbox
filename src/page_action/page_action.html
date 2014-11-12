@@ -1,17 +1,139 @@
 <!doctype html>
 <style type="text/css">
-	#mainPopup {
-		padding: 10px;
-		height: 200px;
-		width: 400px;
-		font-family: Helvetica, Ubuntu, Arial, sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+
+	/*General Styles*/
+	fieldset{
+		border: none;
 	}
-	h1 {
-		font-size: 2em;
+	input {
+	  color: #555555;
+	  background: white;
+	  border: 1px solid #dedede;  
+	  border-radius: 5px;
+	  
+	  font-size: 1.5em;
+
+	  margin: 0;
+	  
+	  position: relative;
+	  left: 0;
+	  top: 0;	
+	  
+	  display: block;
+	  
+
+	  /*Transition*/
+	  -webkit-transition: all 0.30s ease-in-out;
+	  -moz-transition: all 0.30s ease-in-out;
+	  -ms-transition: all 0.30s ease-in-out;
+	  -o-transition: all 0.30s ease-in-out;
+	}
+
+	/*Text Input Boxes*/
+	label {
+	  color: #555;
+	  
+	  vertical-align: middle;
+	  font-size: 1.5em;
+	  
+	  text-align: right;
+	  float: left;
+	  width: 30%;
+	  margin: 0;
+	  padding: 5px 10px;
+	  
+	  display: inline-block; /* pas besoin */
+	}
+	.txt-input{
+      /*Outline*/
+	  outline: none;
+
+	  /*Padding*/
+	  padding: 5px 10px;
+
+	  /*Border*/
+	  border: 1px solid #DDDDDD;
+
+	}
+	.txt-input:focus{
+	  border: 1px solid rgba(81, 203, 238, 1);
+      box-shadow: 0 0 10px skyblue;
+	}
+
+	/*Buttons*/
+	.button-wrapper{
+	  text-align: center;
+	  margin-top: 1em;
+	}
+	.button{
+	  font-weight: 200;
+	  font-size: 0.99em;
+	  padding: 10px;
+	  margin-left: 15%;
+	  float: left;
+	  text-transform: uppercase;
+	  cursor: pointer;
+	}
+	input[type="button"] {
+	  color: whitesmoke;
+	  background: #27ae60;
+	  border: none;
+	}
+	input[type="button"]:hover,
+	input[type=reset]:hover {
+		/*bo*/
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+	}
+
+	input[type="button"]:focus,
+	input[type=reset]:focus{
+		outline: none;
+		-webkit-transform: scale(0.95, 0.95);
+	    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	} 
+
+	input[type=reset]{
+	  color: whitesmoke;
+	  background: #e74c3c;
+	  border: none;
+	}
+
+	/*Main Popup*/
+	#mainPopup {
+		font-family: 'Lato';
+		font-weight: 300;
+
+		min-width: 540px;
+
+		background: whitesmoke;
+		border: 1px solid cadetblue;	
+	}
+	 #mainPopup form{
+		margin: 10px;
 	}
 </style>
 
 <div id="mainPopup">
-<h1>Background for Inbox</h1>
-<p>Change your Google Inbox background</p>
+	<form action="">
+	  
+	  <h3>Background for Inbox</h3>
+  
+      <fieldset>
+        <label for="bg-color">Background Color</label>
+        <input class="txt-input" id="bg-color-input" type="text" name="bg-color" placeholder="#FF7F50, rgb(255,127,80), coral" />
+      </fieldset>
+  
+      <fieldset>
+        <label for="bg-img">Background Image</label>
+        <input class="txt-input" id="bg-img-input" type="text" name="bg-img" placeholder="http://www.cat.com/cat.jpg" />
+      </fieldset>
+  
+      <fieldset class="button-wrapper">
+          <input type="button" class="button" value="update" id="update-button"/>
+          <input type="reset"  class="button" value="reset" id="reset-button" />
+      </fieldset>
+  
+	</form>
+	<script src="page_action.js"></script>	
 </div>

@@ -1,9 +1,9 @@
 {
-  "name": "Background for inbox",
-  "version": "0.0.1",
+  "name": "Background for Inbox",
+  "version": "0.0.2",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "description": "This extension changes the background of Google Inbox",
+  "homepage_url": "http://devan.im",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
