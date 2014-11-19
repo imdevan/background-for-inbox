@@ -48,6 +48,14 @@ function setBgColor(bgColor){
 	}
 }
 
+//the grey bars above sections
+function removeDayBackgrounds(){
+	var labelBars = document.getElementsByClassName("Y-bK-bz")
+	for(var i = 0; i < labelBars.length; i++){
+		labelBars[i].style.background = "transparent";
+	}
+}
+
 //place body background position
 function placeBg(){
 	
@@ -98,6 +106,8 @@ chrome.extension.sendMessage({}, function(response) {
 		if (document.readyState === "complete") {
 
 			// ----------------------------------------------------------
+
+			removeDayBackgrounds();
 
 			var bgColor = "", bgImage = "";
 			clearInterval(readyStateCheckInterval);
