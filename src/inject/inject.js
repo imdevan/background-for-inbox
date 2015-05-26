@@ -1,15 +1,17 @@
 
 window.bgImgObj = new Image();
 
+// When settings are changed
 chrome.storage.onChanged.addListener(function(changes, namespace) {
 
 	// Reload the webpage
 	location.reload();
 });
 
+
 // Set background image of inbox
 function setBgImage(bgImg){
-	// console.log("setBgImage Called \n%s ", bgImg);
+
 	if (bgImg.length > 0) {
 		bgImgObj.onload = function(){
 			placeBg();	
@@ -33,9 +35,8 @@ function setBgImage(bgImg){
 	}
 }
 
-// Set background color of inbo
+// Set background color of inbox
 function setBgColor(bgColor){
-	// console.log("setBgColor Called \n%s ", bgColor);
 
 	// Change body background
 	if(bgColor.length > 0){
@@ -48,7 +49,7 @@ function setBgColor(bgColor){
 	}
 }
 
-//the grey bars above sections
+// the grey bars above sections
 function removeDayBackgrounds(){
 	var labelBars = document.getElementsByClassName("Y-bK-bz")
 	for(var i = 0; i < labelBars.length; i++){
@@ -56,7 +57,7 @@ function removeDayBackgrounds(){
 	}
 }
 
-//place body background position
+// place body background position
 function placeBg(){
 	
 	// start with full width for display size
@@ -64,6 +65,7 @@ function placeBg(){
 	bgImgObj.displayHeight = 	bgImgObj.displayWidth *
 								bgImgObj.height /
 								bgImgObj.width;
+
 	if(bgImgObj.displayHeight >= window.innerHeight){
 		// is full width and scrolling
 		
@@ -105,8 +107,6 @@ chrome.extension.sendMessage({}, function(response) {
 
 		if (document.readyState === "complete") {
 
-			// ----------------------------------------------------------
-
 			removeDayBackgrounds();
 
 			var bgColor = "", bgImage = "";
@@ -138,8 +138,7 @@ chrome.extension.sendMessage({}, function(response) {
 			//set listener for scrolling
 			window.onscroll = placeBg;
 			window.onresize = placeBg;
-			// ----------------------------------------------------------
-
+			
 		}
 	}, 10);
 });
