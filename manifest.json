@@ -1,7 +1,7 @@
 {
   "name": "Background for Inbox",
-  "version": "0.0.2",
-  "manifest_version": 2,
+  "version": "1.2.0",
+  "manifest_version": 3,
   "description": "This extension changes the background of Google Inbox",
   "homepage_url": "http://devan.im",
   "icons": {
@@ -10,13 +10,13 @@
     "128": "icons/icon128.png"
   },
   "default_locale": "en",
-  "background": {
-    "page": "src/bg/background.html",
-    "persistent": true
-  },
   "permissions": [
     "storage"
   ],
+  "background": {
+    "page": "src/bg/bg.html",
+    "persistent": true
+  },
   "page_action": {
     "default_icon": "icons/icon19.png",
     "default_title": "page action demo",
