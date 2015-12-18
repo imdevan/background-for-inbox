@@ -5,8 +5,10 @@ The purpose of this extension is to add a background to Google Inbox.
 
 This application [can be found on the webstore](https://chrome.google.com/webstore/detail/background-for-inbox/comnjhiolfpohdfffgggojgamelmanac)
 
+![](https://lh3.googleusercontent.com/Y5P-X06TWASXG-GsrvJ-Sp5vUl2ySrkL2hkJsnMOpMxt6vZtsESccee9258R2tmd_-09RcGF7A=s1280-h800-e365-rw)
 
-### Next Update
+### Future work
 
-- Color picker to select color
-- Save images from local storage as 64 bit encoding to chrome storage http://stackoverflow.com/a/8275283
+I'm currently not planning on adding any more features to this project. 
+
+If you want to make an update though, feel free to submit a pull request or reach out to me! ᵔᴥᵔ
